@@ -1,0 +1,1 @@
+<h1>Tema padrão da loja virtual</h1>

@@ -20,7 +20,7 @@ class ProdutosController extends AppController {
  *
  * @return void
  */
-	public function index() {
+	public function admin_index() {
 		$this->Produto->recursive = 0;
 		$this->set('produtos', $this->Paginator->paginate());
 	}
@@ -45,7 +45,7 @@ class ProdutosController extends AppController {
  *
  * @return void
  */
-	public function add() {
+	public function admin_add() {
 		if ($this->request->is('post')) {
 			$this->Produto->create();
 			if ($this->Produto->save($this->request->data)) {
@@ -69,7 +69,7 @@ class ProdutosController extends AppController {
  * @param string $id
  * @return void
  */
-	public function edit($id = null) {
+	public function admin_edit($id = null) {
 		if (!$this->Produto->exists($id)) {
 			throw new NotFoundException(__('Invalid produto'));
 		}
@@ -98,7 +98,7 @@ class ProdutosController extends AppController {
  * @param string $id
  * @return void
  */
-	public function delete($id = null) {
+	public function admin_delete($id = null) {
 		$this->Produto->id = $id;
 		if (!$this->Produto->exists()) {
 			throw new NotFoundException(__('Invalid produto'));
