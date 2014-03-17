@@ -38,7 +38,7 @@ class AppController extends Controller {
 	{
 		if ((!empty($this->request->params['prefix'])) and ($this->request->params['prefix'] == 'admin')) 
 		{
-			// $this->theme = 'admin';	
+			$this->theme = 'cakestrap';	
 		} else {
 			$this->theme = 'default';	
 		}			
