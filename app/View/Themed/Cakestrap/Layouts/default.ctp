@@ -65,7 +65,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		<div class="container">
 			<div class="well well-sm">
 				<small>
-					<?php echo $this->element('sql_dump'); ?>
+					<?php  echo $this->element('footer/footer'); ?>
 				</small>
 			</div><!-- /.well well-sm -->
 		</div><!-- /.container -->
